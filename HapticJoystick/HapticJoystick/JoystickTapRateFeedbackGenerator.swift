@@ -19,8 +19,13 @@ import UIKit
 /// to sense the position of their thumb on the joystick without looking at it.
 class JoystickTapRateFeedbackGenerator: JoystickFeedbackGenerator {
     
+    typealias Ticks = Int
     private enum Constants {
+        /// The frequency of ticks in seconds
         static let tickInterval: TimeInterval = 0.1
+        
+        /// Indicates that with a zero tap rate, feedback will be generated every 10 ticks
+        static let idleTapTickPeriod: Ticks = 10
     }
     
     private let light = UIImpactFeedbackGenerator(style: .light)
@@ -28,8 +33,18 @@ class JoystickTapRateFeedbackGenerator: JoystickFeedbackGenerator {
     private let heavy = UIImpactFeedbackGenerator(style: .heavy)
     private var timer: Timer?
     
+    /// The time of the most recent haptic feedback generation, set using CACurrentMediaTime()
+    private var lastTapTime: CFTimeInterval = 0.0
     
-    func start(normalizedJoystickVector: CGPoint) {
+    /// A float from [0, 1] indicating how fast haptic feedback should be generated
+    /// 0 indicates the slowest tap rate, while 1 indicates the fastest tap rate
+    private var currentTapRate: Float = 0.0
+    
+    /// A float from [0, 1] indicate how heavy the haptic feedback should be
+    /// 0 indicates the lightest haptic feedback while 1 indicates the heaviest haptic feedback
+    private var currentTapWeight: Float = 0.0
+    
+    func start(withNormalizedJoystickVector vector: CGPoint) {
         timer = Timer(timeInterval: Constants.tickInterval, target: self,
                       selector: #selector(tick(timer:)), userInfo: nil, repeats: true)
         RunLoop.current.add(timer!, forMode: .common)
@@ -37,7 +52,7 @@ class JoystickTapRateFeedbackGenerator: JoystickFeedbackGenerator {
         medium.prepare()
         heavy.prepare()
         
-        print("Start with joystick vector: \(normalizedJoystickVector)")
+        update(withNormalizedJoystickVector: vector)
     }
     
     func stop() {
@@ -46,9 +61,25 @@ class JoystickTapRateFeedbackGenerator: JoystickFeedbackGenerator {
         print("Stop")
     }
     
-    func updateJoystickVector(_ normalizedJoystickVector: CGPoint) {
-        // TODO: update internal state with the provided joystick vector
-        print("Update with joystick vector: \(normalizedJoystickVector)")
+    func update(withNormalizedJoystickVector vector: CGPoint) {
+        updateTapRate(withJoystickVector: vector)
+        updateTapWeight(withJoystickVector: vector)
+    }
+    
+    // MARK: Private
+    
+    private func updateTapRate(withJoystickVector vector: CGPoint) {
+        let raw_magnitude = sqrt(pow(vector.x, 2.0) + pow(vector.x, 2.0))
+        currentTapRate = Float(min(1.0, raw_magnitude))
+        print("Updated tap rate to: \(currentTapRate)")
+    }
+    
+    private func updateTapWeight(withJoystickVector vector: CGPoint) {
+        let theta = abs(atan(vector.y / vector.x))
+        let proximityToPole = min(theta, (CGFloat.pi / 2.0) - theta)
+        let maxProximityToPole = CGFloat.pi / 4.0  // "45 degrees"
+        currentTapWeight = Float(1.0 - (proximityToPole / maxProximityToPole))
+        print("Updated tap weight to: \(currentTapWeight)")
     }
     
     @objc private func tick(timer: Timer) {

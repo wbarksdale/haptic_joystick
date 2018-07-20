@@ -44,7 +44,7 @@ class JoystickView: UIView {
         for touch in touches {
             let touchPoint = touch.location(in: self)
             let normalizedVector = normalizedVectorFromTouchPoint(touchPoint)
-            feedbackGenerator.start(normalizedJoystickVector: normalizedVector)
+            feedbackGenerator.start(withNormalizedJoystickVector: normalizedVector)
         }
     }
     
@@ -52,7 +52,7 @@ class JoystickView: UIView {
         for touch in touches {
             let touchPoint = touch.location(in: self)
             let normalizedVector = normalizedVectorFromTouchPoint(touchPoint)
-            feedbackGenerator.updateJoystickVector(normalizedVector)
+            feedbackGenerator.update(withNormalizedJoystickVector: normalizedVector)
         }
     }
     
