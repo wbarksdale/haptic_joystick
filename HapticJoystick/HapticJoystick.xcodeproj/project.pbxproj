@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E4B18E292102442E00B4CE63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B18E282102442E00B4CE63 /* AppDelegate.swift */; };
+		E4B18E2B2102442E00B4CE63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B18E2A2102442E00B4CE63 /* ViewController.swift */; };
+		E4B18E302102443000B4CE63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4B18E2F2102443000B4CE63 /* Assets.xcassets */; };
+		E4B18E332102443000B4CE63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B18E312102443000B4CE63 /* LaunchScreen.storyboard */; };
+		E4B18E3E2102443000B4CE63 /* HapticJoystickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B18E3D2102443000B4CE63 /* HapticJoystickTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4B18E3A2102443000B4CE63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4B18E1D2102442E00B4CE63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4B18E242102442E00B4CE63;
+			remoteInfo = HapticJoystick;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E4B18E252102442E00B4CE63 /* HapticJoystick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HapticJoystick.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B18E282102442E00B4CE63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E4B18E2A2102442E00B4CE63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E4B18E2F2102443000B4CE63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E4B18E322102443000B4CE63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E4B18E342102443000B4CE63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4B18E392102443000B4CE63 /* HapticJoystickTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HapticJoystickTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B18E3D2102443000B4CE63 /* HapticJoystickTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticJoystickTests.swift; sourceTree = "<group>"; };
+		E4B18E3F2102443000B4CE63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4B18E222102442E00B4CE63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4B18E362102443000B4CE63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E4B18E1C2102442E00B4CE63 = {
+			isa = PBXGroup;
+			children = (
+				E4B18E272102442E00B4CE63 /* HapticJoystick */,
+				E4B18E3C2102443000B4CE63 /* HapticJoystickTests */,
+				E4B18E262102442E00B4CE63 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E4B18E262102442E00B4CE63 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4B18E252102442E00B4CE63 /* HapticJoystick.app */,
+				E4B18E392102443000B4CE63 /* HapticJoystickTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4B18E272102442E00B4CE63 /* HapticJoystick */ = {
+			isa = PBXGroup;
+			children = (
+				E4B18E282102442E00B4CE63 /* AppDelegate.swift */,
+				E4B18E2A2102442E00B4CE63 /* ViewController.swift */,
+				E4B18E2F2102443000B4CE63 /* Assets.xcassets */,
+				E4B18E312102443000B4CE63 /* LaunchScreen.storyboard */,
+				E4B18E342102443000B4CE63 /* Info.plist */,
+			);
+			path = HapticJoystick;
+			sourceTree = "<group>";
+		};
+		E4B18E3C2102443000B4CE63 /* HapticJoystickTests */ = {
+			isa = PBXGroup;
+			children = (
+				E4B18E3D2102443000B4CE63 /* HapticJoystickTests.swift */,
+				E4B18E3F2102443000B4CE63 /* Info.plist */,
+			);
+			path = HapticJoystickTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4B18E242102442E00B4CE63 /* HapticJoystick */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4B18E422102443000B4CE63 /* Build configuration list for PBXNativeTarget "HapticJoystick" */;
+			buildPhases = (
+				E4B18E212102442E00B4CE63 /* Sources */,
+				E4B18E222102442E00B4CE63 /* Frameworks */,
+				E4B18E232102442E00B4CE63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HapticJoystick;
+			productName = HapticJoystick;
+			productReference = E4B18E252102442E00B4CE63 /* HapticJoystick.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E4B18E382102443000B4CE63 /* HapticJoystickTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4B18E452102443000B4CE63 /* Build configuration list for PBXNativeTarget "HapticJoystickTests" */;
+			buildPhases = (
+				E4B18E352102443000B4CE63 /* Sources */,
+				E4B18E362102443000B4CE63 /* Frameworks */,
+				E4B18E372102443000B4CE63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4B18E3B2102443000B4CE63 /* PBXTargetDependency */,
+			);
+			name = HapticJoystickTests;
+			productName = HapticJoystickTests;
+			productReference = E4B18E392102443000B4CE63 /* HapticJoystickTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4B18E1D2102442E00B4CE63 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "William Barksdale";
+				TargetAttributes = {
+					E4B18E242102442E00B4CE63 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					E4B18E382102443000B4CE63 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = E4B18E242102442E00B4CE63;
+					};
+				};
+			};
+			buildConfigurationList = E4B18E202102442E00B4CE63 /* Build configuration list for PBXProject "HapticJoystick" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E4B18E1C2102442E00B4CE63;
+			productRefGroup = E4B18E262102442E00B4CE63 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E4B18E242102442E00B4CE63 /* HapticJoystick */,
+				E4B18E382102443000B4CE63 /* HapticJoystickTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E4B18E232102442E00B4CE63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4B18E332102443000B4CE63 /* LaunchScreen.storyboard in Resources */,
+				E4B18E302102443000B4CE63 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4B18E372102443000B4CE63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4B18E212102442E00B4CE63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4B18E2B2102442E00B4CE63 /* ViewController.swift in Sources */,
+				E4B18E292102442E00B4CE63 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4B18E352102443000B4CE63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4B18E3E2102443000B4CE63 /* HapticJoystickTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E4B18E3B2102443000B4CE63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4B18E242102442E00B4CE63 /* HapticJoystick */;
+			targetProxy = E4B18E3A2102443000B4CE63 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E4B18E312102443000B4CE63 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E4B18E322102443000B4CE63 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E4B18E402102443000B4CE63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E4B18E412102443000B4CE63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E4B18E432102443000B4CE63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XSW25E3F8M;
+				INFOPLIST_FILE = HapticJoystick/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.willbarksdale.HapticJoystick;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E4B18E442102443000B4CE63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XSW25E3F8M;
+				INFOPLIST_FILE = HapticJoystick/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.willbarksdale.HapticJoystick;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E4B18E462102443000B4CE63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XSW25E3F8M;
+				INFOPLIST_FILE = HapticJoystickTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.willbarksdale.HapticJoystickTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HapticJoystick.app/HapticJoystick";
+			};
+			name = Debug;
+		};
+		E4B18E472102443000B4CE63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XSW25E3F8M;
+				INFOPLIST_FILE = HapticJoystickTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.willbarksdale.HapticJoystickTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HapticJoystick.app/HapticJoystick";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4B18E202102442E00B4CE63 /* Build configuration list for PBXProject "HapticJoystick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B18E402102443000B4CE63 /* Debug */,
+				E4B18E412102443000B4CE63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4B18E422102443000B4CE63 /* Build configuration list for PBXNativeTarget "HapticJoystick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B18E432102443000B4CE63 /* Debug */,
+				E4B18E442102443000B4CE63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4B18E452102443000B4CE63 /* Build configuration list for PBXNativeTarget "HapticJoystickTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B18E462102443000B4CE63 /* Debug */,
+				E4B18E472102443000B4CE63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4B18E1D2102442E00B4CE63 /* Project object */;
+}
