@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		E47D5D202102453900C4AFA3 /* JoystickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47D5D1F2102453900C4AFA3 /* JoystickViewController.swift */; };
 		E47D5D222102454300C4AFA3 /* JoystickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47D5D212102454300C4AFA3 /* JoystickView.swift */; };
-		E47D5D262102456C00C4AFA3 /* JoystickFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47D5D252102456C00C4AFA3 /* JoystickFeedbackGenerator.swift */; };
+		E47D5D282102469700C4AFA3 /* JoystickFeedbackGeneratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47D5D272102469700C4AFA3 /* JoystickFeedbackGeneratorProtocol.swift */; };
+		E47D5D2A2102492200C4AFA3 /* JoystickTapRateFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47D5D292102492200C4AFA3 /* JoystickTapRateFeedbackGenerator.swift */; };
 		E4B18E292102442E00B4CE63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B18E282102442E00B4CE63 /* AppDelegate.swift */; };
 		E4B18E2B2102442E00B4CE63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B18E2A2102442E00B4CE63 /* ViewController.swift */; };
 		E4B18E302102443000B4CE63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4B18E2F2102443000B4CE63 /* Assets.xcassets */; };
@@ -30,7 +31,8 @@
 /* Begin PBXFileReference section */
 		E47D5D1F2102453900C4AFA3 /* JoystickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoystickViewController.swift; sourceTree = "<group>"; };
 		E47D5D212102454300C4AFA3 /* JoystickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoystickView.swift; sourceTree = "<group>"; };
-		E47D5D252102456C00C4AFA3 /* JoystickFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoystickFeedbackGenerator.swift; sourceTree = "<group>"; };
+		E47D5D272102469700C4AFA3 /* JoystickFeedbackGeneratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoystickFeedbackGeneratorProtocol.swift; sourceTree = "<group>"; };
+		E47D5D292102492200C4AFA3 /* JoystickTapRateFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoystickTapRateFeedbackGenerator.swift; sourceTree = "<group>"; };
 		E4B18E252102442E00B4CE63 /* HapticJoystick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HapticJoystick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B18E282102442E00B4CE63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4B18E2A2102442E00B4CE63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +90,8 @@
 				E4B18E342102443000B4CE63 /* Info.plist */,
 				E47D5D1F2102453900C4AFA3 /* JoystickViewController.swift */,
 				E47D5D212102454300C4AFA3 /* JoystickView.swift */,
-				E47D5D252102456C00C4AFA3 /* JoystickFeedbackGenerator.swift */,
+				E47D5D272102469700C4AFA3 /* JoystickFeedbackGeneratorProtocol.swift */,
+				E47D5D292102492200C4AFA3 /* JoystickTapRateFeedbackGenerator.swift */,
 			);
 			path = HapticJoystick;
 			sourceTree = "<group>";
@@ -204,8 +207,9 @@
 			files = (
 				E47D5D222102454300C4AFA3 /* JoystickView.swift in Sources */,
 				E4B18E2B2102442E00B4CE63 /* ViewController.swift in Sources */,
+				E47D5D282102469700C4AFA3 /* JoystickFeedbackGeneratorProtocol.swift in Sources */,
 				E47D5D202102453900C4AFA3 /* JoystickViewController.swift in Sources */,
-				E47D5D262102456C00C4AFA3 /* JoystickFeedbackGenerator.swift in Sources */,
+				E47D5D2A2102492200C4AFA3 /* JoystickTapRateFeedbackGenerator.swift in Sources */,
 				E4B18E292102442E00B4CE63 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
