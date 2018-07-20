@@ -36,15 +36,19 @@ class JoystickTapRateFeedbackGenerator: JoystickFeedbackGenerator {
         light.prepare()
         medium.prepare()
         heavy.prepare()
+        
+        print("Start with joystick vector: \(normalizedJoystickVector)")
     }
     
     func stop() {
         timer?.invalidate()
         timer = nil
+        print("Stop")
     }
     
     func updateJoystickVector(_ normalizedJoystickVector: CGPoint) {
         // TODO: update internal state with the provided joystick vector
+        print("Update with joystick vector: \(normalizedJoystickVector)")
     }
     
     @objc private func tick(timer: Timer) {
