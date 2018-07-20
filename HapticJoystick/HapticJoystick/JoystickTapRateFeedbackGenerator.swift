@@ -18,14 +18,13 @@ import UIKit
 /// position of North East will generate light feedback. In theory, this allows the user
 /// to sense the position of their thumb on the joystick without looking at it.
 class JoystickTapRateFeedbackGenerator: JoystickFeedbackGenerator {
-    
-    typealias Ticks = Int
     private enum Constants {
         /// The frequency of ticks in seconds
         static let tickInterval: TimeInterval = 0.1
         
-        /// Indicates that with a zero tap rate, feedback will be generated every 10 ticks
-        static let idleTapTickPeriod: Ticks = 10
+        /// Indicates that with a zero tap rate, feedback will be generated every
+        /// `idleTapInterval` seconds
+        static let idleTapInterval: TimeInterval = 1.0
     }
     
     private let light = UIImpactFeedbackGenerator(style: .light)
@@ -69,7 +68,7 @@ class JoystickTapRateFeedbackGenerator: JoystickFeedbackGenerator {
     // MARK: Private
     
     private func updateTapRate(withJoystickVector vector: CGPoint) {
-        let raw_magnitude = sqrt(pow(vector.x, 2.0) + pow(vector.x, 2.0))
+        let raw_magnitude = sqrt(pow(vector.x, 2.0) + pow(vector.y, 2.0))
         currentTapRate = Float(min(1.0, raw_magnitude))
         print("Updated tap rate to: \(currentTapRate)")
     }
@@ -83,7 +82,21 @@ class JoystickTapRateFeedbackGenerator: JoystickFeedbackGenerator {
     }
     
     @objc private func tick(timer: Timer) {
-        // TODO: implement different feedback
-        medium.impactOccurred()
+        // Number of seconds in between taps given current tap rate
+        let currentTapInterval = TimeInterval(1.0 - currentTapRate) * TimeInterval(Constants.idleTapInterval)
+        
+        // The time at which the next tap should occur given tap rate
+        let nextTapTime = lastTapTime + currentTapInterval
+        let currentTime = CACurrentMediaTime()
+        
+        if currentTime > nextTapTime {
+            lastTapTime = currentTime
+            switch currentTapWeight {
+            case 0.0...0.33: light.impactOccurred()
+            case 0.33...0.66: medium.impactOccurred()
+            case 0.66...1.0: heavy.impactOccurred()
+            default: assert(false, "weight is outside acceptable range")
+            }
+        }
     }
 }
