@@ -20,11 +20,11 @@ import UIKit
 class JoystickTapRateFeedbackGenerator: JoystickFeedbackGenerator {
     private enum Constants {
         /// The frequency of ticks in seconds
-        static let tickInterval: TimeInterval = 0.1
+        static let tickInterval: TimeInterval = 0.075
         
         /// Indicates that with a zero tap rate, feedback will be generated every
         /// `idleTapInterval` seconds
-        static let idleTapInterval: TimeInterval = 1.0
+        static let idleTapInterval: TimeInterval = 0.25
     }
     
     private let light = UIImpactFeedbackGenerator(style: .light)
@@ -57,7 +57,6 @@ class JoystickTapRateFeedbackGenerator: JoystickFeedbackGenerator {
     func stop() {
         timer?.invalidate()
         timer = nil
-        print("Stop")
     }
     
     func update(withNormalizedJoystickVector vector: CGPoint) {
@@ -70,7 +69,7 @@ class JoystickTapRateFeedbackGenerator: JoystickFeedbackGenerator {
     private func updateTapRate(withJoystickVector vector: CGPoint) {
         let raw_magnitude = sqrt(pow(vector.x, 2.0) + pow(vector.y, 2.0))
         currentTapRate = Float(min(1.0, raw_magnitude))
-        print("Updated tap rate to: \(currentTapRate)")
+        print("rate: \(currentTapRate)")
     }
     
     private func updateTapWeight(withJoystickVector vector: CGPoint) {
@@ -78,7 +77,6 @@ class JoystickTapRateFeedbackGenerator: JoystickFeedbackGenerator {
         let proximityToPole = min(theta, (CGFloat.pi / 2.0) - theta)
         let maxProximityToPole = CGFloat.pi / 4.0  // "45 degrees"
         currentTapWeight = Float(1.0 - (proximityToPole / maxProximityToPole))
-        print("Updated tap weight to: \(currentTapWeight)")
     }
     
     @objc private func tick(timer: Timer) {
@@ -91,11 +89,16 @@ class JoystickTapRateFeedbackGenerator: JoystickFeedbackGenerator {
         
         if currentTime > nextTapTime {
             lastTapTime = currentTime
-            switch currentTapWeight {
-            case 0.0...0.33: light.impactOccurred()
-            case 0.33...0.66: medium.impactOccurred()
-            case 0.66...1.0: heavy.impactOccurred()
-            default: assert(false, "weight is outside acceptable range")
+            if (currentTapRate < 0.1) {
+                // when close to center joystick, the weight information is not really helpful
+                light.impactOccurred()
+            } else {
+                switch currentTapWeight {
+                case 0.0...0.33: light.impactOccurred()
+                case 0.33...0.66: medium.impactOccurred()
+                case 0.66...1.0: heavy.impactOccurred()
+                default: assert(false, "weight is outside acceptable range")
+                }
             }
         }
     }
